@@ -35,7 +35,22 @@ public class CounterServlet extends HttpServlet {
                 "<div class='text-center py-5 my-5 mx-4'>" +
                 "<h1>Counter: " + counter + "</h1>" +
                 "<br/>" +
-                "<a href='count-servlet' type='button' class='btn btn-primary my-4'>+1</a>" +
-                "</div>");
+                "<button class='btn btn-primary my-4 stop' onclick='stopCounter()'>Stop</button>" +
+                "</div>" +
+                "<script>" +
+                "setTimeout(function() { location.reload(); }, 1000);" +
+                "var counter = 0;" +
+                "function updateCounter() {" +
+                "    document.getElementById('counter').textContent = counter;" +
+                "    counter = (counter + 1) % 101;" +
+                "}" +
+                "updateCounter();" +
+                "</script>" +
+                "<script>" +
+                "function stopCounter() {" +
+                "    location.reload();" +
+                "    document.getElementsByTagName('button')[0].disabled = true;" +
+                "}" +
+                "</script>");
     }
 }

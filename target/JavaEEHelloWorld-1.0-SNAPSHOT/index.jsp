@@ -14,9 +14,9 @@
             <br/>
             <a href="hello-servlet" type="button" class="btn btn-primary my-4">Welcome message</a>
             <br/>
-            <a href="link-servlet" type="button" class="btn btn-primary my-4">Click me!</a>
+            <a href="link-servlet?link=www.newrelic.com" type="button" class="btn btn-primary my-4">Click me!</a>
             <br/>
-            <a href="count-servlet" type="button" class="btn btn-primary my-4">Let's count</a>
+            <a href="count-servlet" type="button" class="btn btn-primary my-4">Let's count!</a>
         </div>
     </body>
 </html>
