@@ -35,7 +35,7 @@ public class CounterServlet extends HttpServlet {
                 "<div class='text-center py-5 my-5 mx-4'>" +
                 "<h1>Counter: " + counter + "</h1>" +
                 "<br/>" +
-                "<button class='btn btn-primary my-4 stop' onclick='stopCounter()'>Stop</button>" +
+                "<button class='btn btn-primary my-4' onclick='stopCounter()'>Stop</button>" +
                 "</div>" +
                 "<script>" +
                 "setTimeout(function() { location.reload(); }, 1000);" +

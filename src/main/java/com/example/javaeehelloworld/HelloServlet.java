@@ -31,12 +31,12 @@ public class HelloServlet extends HttpServlet {
 
         out.println("<div class='text-center py-5 my-5 mx-4'>");
 
-        out.println("<h1>" + message + "</h1>");
-        out.println("<p>I am just a demo app in order to get a few attributes running in the Java agent.</p>");
+        out.println("<h1 class='my-4'>" + message + "</h1>");
+        out.println("<p class='my-4'>I am just a demo app in order to get a few attributes running in the Java agent.</p>");
 
         String WelcomeMessage = "Welcome!";
 
-        out.println("<p>" + WelcomeMessage + "</p>");
+        out.println("<p class='my-4'>" + WelcomeMessage + "</p>");
 
         out.println("<br/></div>");
         out.println("</body></html>");
