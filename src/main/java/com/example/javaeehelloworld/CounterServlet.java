@@ -6,6 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
+@WebServlet(name = "countServlet", value = "/count-servlet")
 public class CounterServlet extends HttpServlet {
     private int counter = 0; // Counter variable
 
