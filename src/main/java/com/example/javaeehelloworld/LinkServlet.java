@@ -31,6 +31,7 @@ public class LinkServlet extends HttpServlet {
                 "<div class='text-center py-5 my-5 mx-4'>" +
                 "<h1>" + message + "</h1>" +
                 "<br/>" +
+                "<a class='btn btn-primary my-4' href=\"index.jsp\">Back</a>" +
                 "</div>");
     }
 }

@@ -38,6 +38,8 @@ public class HelloServlet extends HttpServlet {
 
         out.println("<p class='my-4'>" + WelcomeMessage + "</p>");
 
+        out.println("<br/><a class='btn btn-primary my-4' href='index.jsp'>Back</a>");
+
         out.println("<br/></div>");
         out.println("</body></html>");
     }
