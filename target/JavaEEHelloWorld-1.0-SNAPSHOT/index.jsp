@@ -8,6 +8,8 @@
 <h1><%= "New Relic Java agent instrumentation" %>
 </h1>
 <br/>
-<a href="hello-servlet">Click me!</a>
+<a href="hello-servlet">Welcome message</a>
+<br/>
+<a href="link-servlet">Click me!</a>
 </body>
 </html>
