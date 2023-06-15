@@ -18,10 +18,19 @@ public class HelloServlet extends HttpServlet {
 
         // Hello
         PrintWriter out = response.getWriter();
+
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
         out.println("<p>I am just a demo app in order to get a few attributes running in the Java agent.</p>");
         out.println("<p>What's your name?</p>");
+
+        String name = request.getParameter("name");
+
+        String nameWelcome = "Welcome, " + name + "!";
+
+        response.setContentType("text/html");
+
+        out.println("<p>" + nameWelcome + "</p>");
         out.println("</body></html>");
     }
 
