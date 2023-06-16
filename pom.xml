@@ -36,6 +36,13 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.newrelic.agent.java</groupId>
+            <artifactId>newrelic-java</artifactId>
+            <version>8.4.0</version>
+            <scope>provided</scope>
+            <type>zip</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -45,6 +52,23 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
             </plugin>
+            <executions>
+                <execution>
+                    <id>unpack-newrelic</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>unpack-dependencies</goal>
+                    </goals>
+                    <configuration>
+                        <includeGroupIds>com.newrelic.agent.java</includeGroupIds>
+                        <includeArtifactIds>newrelic-java</includeArtifactIds>
+                        <overWriteReleases>false</overWriteReleases>
+                        <overWriteSnapshots>false</overWriteSnapshots>
+                        <overWriteIfNewer>true</overWriteIfNewer>
+                        <outputDirectory>${project.build.directory}</outputDirectory>
+                    </configuration>
+                </execution>
+            </executions>
         </plugins>
     </build>
 </project>

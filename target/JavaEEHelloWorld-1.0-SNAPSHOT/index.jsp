@@ -17,6 +17,8 @@
             <a href="link-servlet?link=www.newrelic.com" type="button" class="btn btn-primary my-4">Click me!</a>
             <br/>
             <a href="count-servlet" type="button" class="btn btn-primary my-4">Let's count!</a>
+            <br/>
+            <a href="loop-servlet" type="button" class="btn btn-primary my-4">Loop me in!</a>
         </div>
     </body>
 </html>
