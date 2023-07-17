@@ -2,6 +2,7 @@ package com.example.javaeehelloworld;
 
 import java.io.*;
 
+import com.newrelic.api.agent.NewRelic;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -10,6 +11,7 @@ import jakarta.servlet.annotation.*;
 public class LinkServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        NewRelic.addCustomParameter("cust_att_link", "sample text for link");
 
         // Get the link parameter from the request
         String link = request.getParameter("link");

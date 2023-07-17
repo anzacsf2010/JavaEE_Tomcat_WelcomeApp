@@ -2,6 +2,7 @@ package com.example.javaeehelloworld;
 
 import java.io.*;
 
+import com.newrelic.api.agent.NewRelic;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -12,6 +13,7 @@ public class CounterServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        NewRelic.addCustomParameter("cust_att_counter", "sample text for counter");
 
         // Increment the counter
         counter++;

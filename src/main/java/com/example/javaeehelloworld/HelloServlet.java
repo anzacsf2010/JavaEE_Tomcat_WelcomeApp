@@ -4,6 +4,7 @@ import java.io.*;
 
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import com.newrelic.api.agent.NewRelic;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
@@ -14,6 +15,7 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        NewRelic.addCustomParameter("cust_att", "sample text");
         response.setContentType("text/html");
 
         // Hello

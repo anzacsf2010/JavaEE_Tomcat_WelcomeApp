@@ -1,6 +1,8 @@
 package com.example.javaeehelloworld;
 
 import java.io.IOException;
+
+import com.newrelic.api.agent.NewRelic;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -12,6 +14,7 @@ public class LoopServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        NewRelic.addCustomParameter("cust_att_loop", "sample text for loop");
 
         // Check if the button was clicked
         String buttonClicked = request.getParameter("buttonClicked");
