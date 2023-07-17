@@ -13,7 +13,7 @@ public class CounterServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        NewRelic.addCustomParameter("cust_att_counter", "sample text for counter");
+        NewRelic.getAgent().getTracedMethod().addCustomAttribute("cust_att_counter", "sample text for counter");
 
         // Increment the counter
         counter++;

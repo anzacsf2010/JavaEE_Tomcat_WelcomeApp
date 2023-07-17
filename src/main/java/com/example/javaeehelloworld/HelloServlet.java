@@ -15,7 +15,7 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        NewRelic.addCustomParameter("cust_att", "sample text");
+        NewRelic.getAgent().getTracedMethod().addCustomAttribute("cust_att", "sample text");
         response.setContentType("text/html");
 
         // Hello
