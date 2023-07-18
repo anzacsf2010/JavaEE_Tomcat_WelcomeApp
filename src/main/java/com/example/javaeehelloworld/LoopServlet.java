@@ -14,7 +14,8 @@ public class LoopServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        NewRelic.getAgent().getTracedMethod().addCustomAttribute("cust_att_loop", "sample text for loop");
+        NewRelic.getAgent().getTracedMethod().addCustomAttribute("userId", "sample user ID to be changed later");
+        NewRelic.getAgent().getTracedMethod().addCustomAttribute("productID", "sample product ID to be changed later");
 
         // Check if the button was clicked
         String buttonClicked = request.getParameter("buttonClicked");

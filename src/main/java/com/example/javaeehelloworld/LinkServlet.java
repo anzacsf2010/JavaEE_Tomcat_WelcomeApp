@@ -11,7 +11,8 @@ import jakarta.servlet.annotation.*;
 public class LinkServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        NewRelic.getAgent().getTracedMethod().addCustomAttribute("cust_att_link", "sample text for link");
+        NewRelic.getAgent().getTracedMethod().addCustomAttribute("userId", "sample user ID to be changed later");
+        NewRelic.getAgent().getTracedMethod().addCustomAttribute("productID", "sample product ID to be changed later");
 
         // Get the link parameter from the request
         String link = request.getParameter("link");
