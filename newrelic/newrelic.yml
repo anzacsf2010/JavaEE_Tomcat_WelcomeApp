@@ -103,7 +103,7 @@ common: &default_settings
       # Application log events are collected up to the configured amount. Afterwards,
       # events are sampled to maintain an even distribution across the harvest cycle.
       # Default is 10000. Setting to 0 will disable.
-      #max_samples_stored: 10000
+      max_samples_stored: 10000
 
     # The agent will generate metrics to indicate the number of
     # application log events occurring at each distinct log level.
